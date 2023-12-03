@@ -1,0 +1,36 @@
+<%- include('./partial/header.ejs') %>
+
+<link rel="stylesheet" href="/stylesheets/update.css">
+
+    <div class="update-item">
+        <!-- /create-expense -->
+        <form action="/update/<%= id %>" method="post">
+            <h1>Expense Update Section</h1>
+            <select required class="form-control" name="category" id="select">
+                <option value="">Select Category</option>
+                <% category.forEach((element)=> { %>
+                    <% if (expense.category===element) { %>
+                        <option id="category" selected value="<%= element %>">
+                            <%= element %>
+                        </option>
+                        <% }else{ %>
+                            <option value="<%= element %>">
+                                <%= element %>
+                            </option>
+                        <% } %>
+                    <% }) %>
+            </select>
+            <br><br>
+            <input value="<%= expense.description %>" id="description" required class="form-control " type="text"
+                placeholder="description" name="description">
+            <br><br>
+            <input id="amount" value="<%= expense.amount %>" class="form-control" required type="number" placeholder="amount"
+                name="amount">
+            <br><br>
+            <button class="btn btn-info">UPDATE</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;<br>
+            <a class="btn btn-outline-dark" href="/profile">Go Back</a>
+        </form>
+    </div>
+
+    <%- include('./partial/footer.ejs') %>

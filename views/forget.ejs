@@ -1,0 +1,14 @@
+<%- include("partial/header")%>
+
+<link rel="stylesheet" href="stylesheets/forget.css">
+
+<div id="center">
+<h1>Forget Password</h1>
+
+<form action="/send-mail" method="POST">
+    <input type="email" placeholder="Email" name="email" /><br>
+    <button>Send Mail</button>
+    <a href="/signin">signin</a>
+</form>
+</div>
+<%- include("partial/footer")%>

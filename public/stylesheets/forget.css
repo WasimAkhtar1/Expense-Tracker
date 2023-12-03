@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Poppins&family=Roboto&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: rgba(95, 158, 160, 0.281);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input{
+    width: 240px;
+    height: 30px;
+    padding: 0 5px;
+    font-size: 1.2vw;
+    
+}
+
+#center{
+    width: 25vw;
+    height: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+
+
+
+button{
+    padding: 6px 10px;
+    background-color: olivedrab;
+    font-size: 1.3vw;
+    color: #fff;
+    border: 0;
+    margin-top: 1vw;
+    border-radius: 5px;
+}
+
+h1{
+    font-size: 2.1vw;
+}
+
+a{
+font-size: 1.3vw;
+margin-left: 10px;
+padding: 6px 10px;
+background-color: cadetblue;
+color: #fff;
+border-radius: 5px;
+}
+
+@media (max-width:600px) {
+    body{
+        background-color: rgba(95, 158, 160, 0.281);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    input{
+        width: 250px;
+        height: 40px;
+        font-size: 2vh;
+        margin-bottom: 1vw;
+        border: 1px solid #000;
+        
+        
+             
+    }
+    
+    #center{
+        width: 80vw;
+        height: 50vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #fff;
+        /* overflow: hidden; */
+    }
+    
+    
+    
+    
+    button{
+        padding: 2vw 2vw;
+        background-color: olivedrab;
+        font-size: 2.6vh;
+        color: #fff;
+        border: 0;
+        margin-top: 1vw;
+        border-radius: 5px;
+    }
+    
+    h1{
+        font-size: 3.5vh;
+        /* transform: translateX(-20px); */
+       margin-bottom: 1vw;
+    }
+    
+    a{
+    font-size: 2.6vh;
+    margin-left: 10px;
+    padding: 2vw 2vw;
+    background-color: cadetblue;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 1vw;
+    
+    }
+}

@@ -1,0 +1,18 @@
+<%- include('partial/header') %>
+<link rel="stylesheet" href="stylesheets/signin.css">
+<div id="main">
+    <h1>Signin Here</h1>
+    <form action="/signin" method="POST">
+        <input type="text" placeholder="Username" name="username" /><br>
+        
+        <input type="password" name="password" placeholder="********" /><br>
+        <button>Signin</button><br>
+          
+        <a href="/forget">Forget Pasword ?</a><br>
+        
+        <p>Don't have an account ? <a href="/signup">Signup</a></p>
+    </form>
+    
+    
+</div>
+<%- include('partial/footer') %>

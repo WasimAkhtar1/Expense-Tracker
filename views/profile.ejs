@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/profile.css">
+</head>
+
+<body>
+    <!-- <#%- include('partial/nav') %> -->
+        <!--  -->
+        <div class="add-item">
+            <!-- /create-expense -->
+            <form action="/create-expense" method="post">
+                <select class="form-control w-45" name="category" id="select">
+                    <option value="">Select Category</option>
+                    <% category.forEach((element)=> { %>
+                        <option value="<%= element %>">
+                            <%= element %>
+                        </option>
+                        <% }) %>
+                </select>
+                <br><br>
+                <input id="description " class="form-control w-45" type="text" placeholder="description" name="description">
+                <br><br>
+                <input class="form-control w-45" type="number" placeholder="amount" name="amount">
+                <br><br>
+                <select name="paymentmodes">
+                    <option value="cash">Cash</option>
+                    <option value="online">Online</option>
+                    <option value="cheque">Cheque</option>
+                </select><br><br>
+                <button>Submit</button>
+            </form>
+        </div>
+
+        <!--  -->
+        <div class="profile">
+            <% expenses.forEach((expense) => { %>
+                     <p>category : <%= expense.category %></p>
+                     <p>description : <%= expense.description %></p>
+                     <p>amount : <%= expense.amount %></p>
+                     <p>date : <%= expense.createdAt %> </p>
+                     <br>
+                     <a href="/delete/<%= expense._id %>">delete</a>
+                     <a href="/update/<%= expense._id %>">update</a>
+                     <hr>
+
+                     
+            <% }) %>
+        </div>
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
